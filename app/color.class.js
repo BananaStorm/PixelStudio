@@ -9,4 +9,8 @@ class Color {
 		this.name = name;
 		this.color_rgb = values;
 	}
+
+	getString(){
+		return "rgb(" + this.color_rgb.join(',') + ")"
+	}
 }

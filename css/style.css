@@ -4,7 +4,7 @@
 
 #palette {
 
-	width: 40px;
+	width: 48px;
 	background-color: lightgrey;
 	margin-top: 50vh; /* poussé de la moitié de hauteur de viewport */
   	transform: translateY(-50%); /* tiré de la moitié de sa propre hauteur */
@@ -17,10 +17,20 @@
 	box-sizing: border-box;
 	padding: 5px;
 	background-color: white;
+	margin: 6px 0 6px 0;
+	cursor: pointer;
+}
+
+.tool:hover, .color:hover {
+	outline: 2px solid grey;
+}
+
+.icon {
+	text-align: center;
 }
 
 #tools, #colors {
 	width: 100%;
-	padding: 8px;
+	padding: 8px 12px;
 }
 

@@ -4,29 +4,35 @@
 	<title></title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta charset="UTF-8">
 </head>
 <body>
-
 	<div id="palette">
 		<div id="tools">
-			<div class="tool">
+			<div class="tool" id="tool">
 				<i class="fa fa-pencil"></i>
-			</div>			
+			</div>		
 		</div>
 
 		<hr>
 
 		<div id="colors">
-			<div class="color">
+			<div class="color" id="color">
 				
 			</div>
 		</div>
 
 	</div>
-
+	<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
 	<script type="text/javascript" src="app/tool.class.js"></script>
 	<script type="text/javascript" src="app/color.class.js"></script>
 	<script type="text/javascript" src="app/pixelstudio.js"></script>	
 	<script type="text/javascript" src="app/palette.js"></script>
+
+	<script type="text/javascript">
+		$(function(){
+			PixelStudio.init();
+		})
+	</script>
 </body>
 </html>
