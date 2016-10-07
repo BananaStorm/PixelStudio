@@ -1,4 +1,4 @@
-var Palette = {
+PixelStudio.palette = {
 	tools  : [],
 	colors : []
 }

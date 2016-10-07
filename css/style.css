@@ -1,0 +1,26 @@
+* {
+	margin: 0;
+}
+
+#palette {
+
+	width: 40px;
+	background-color: lightgrey;
+	margin-top: 50vh; /* poussé de la moitié de hauteur de viewport */
+  	transform: translateY(-50%); /* tiré de la moitié de sa propre hauteur */
+
+}
+
+.tool, .color {
+	width: 24px;
+	height: 24px;
+	box-sizing: border-box;
+	padding: 5px;
+	background-color: white;
+}
+
+#tools, #colors {
+	width: 100%;
+	padding: 8px;
+}
+
