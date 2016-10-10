@@ -19,8 +19,7 @@ PixelStudio.palette_tools = {
 
 			$template
 			.clone()
-			.html("<i class='fa "+ tool.icon_file +"'></i>")
-			.attr("title", tool.name)
+			.html("<i title='" + tool.name + "' class='fa "+ tool.icon_file +"'></i>")
 			.appendTo('#tools')
 
 		}
