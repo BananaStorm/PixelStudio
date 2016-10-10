@@ -13,10 +13,10 @@ var PixelStudio = {
 		let tools = [
 			new Tool('crayon', 'fa-pencil'),
 			new Tool('gomme', 'fa-eraser')
-		]
+		];
 
 		this.palette_color.init(colors);
 		this.palette_tools.init(tools);
-		this.canvas.init('canvas', $(window).width(), $(window).height(), 64);
+		this.canvas.init('canvas', $(window).width() - 70, $(window).height(), 32);
 	}
 };

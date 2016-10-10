@@ -1,8 +1,8 @@
 PixelStudio.canvas = {
 	
 	screen : {
-		width  :0,
-		height :0
+		width : 0,
+		height: 0
 	},
 
 	nb_pixel  : {
@@ -32,14 +32,22 @@ PixelStudio.canvas = {
 		this.nb_pixel.width  = nb_pixel_width;
 
 		let $c = $('<canvas></canvas>');
-		$c.attr( 'width',  this.screen.width  )
-		  .attr( 'height', this.screen.height )
-		  .appendTo('#'+divId);
+		$c.attr({
+			'width' : this.screen.width,
+			'height': this.screen.height
+		}).appendTo('#'+divId);
 
 		this.$canvas = $c;
 
 		this.context = $c[0].getContext('2d');
-		this.context.fillRect(255, 255, 255, 255);
+	},
 
+	draw : function(x, y, color) {
+
+		let bigX = (x-1) * this.pixel_dimension,
+			bigY = (y-1) * this.pixel_dimension;
+
+		this.context.fillStyle = color.getString();
+		this.context.fillRect(bigX, bigY, this.pixel_dimension, this.pixel_dimension);
 	}
 }

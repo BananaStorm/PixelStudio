@@ -18,7 +18,8 @@ ul {
 #canvas {
 	position: absolute;
 	top: 0;
-	left: 0;
+	left: 64px;
+	border: 1px solid black;
 }
 
 .tool, #colors li {
