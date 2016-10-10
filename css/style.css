@@ -20,6 +20,7 @@ ul {
 	top: 0;
 	left: 64px;
 	border: 1px solid black;
+	cursor: crosshair;
 }
 
 .tool, #colors li {

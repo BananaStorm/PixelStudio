@@ -10,6 +10,8 @@ PixelStudio.canvas = {
 		height: 0
 	},
 
+	backgroundColor : null,
+
 	pixel_dimension : 0,
 
 	
@@ -31,15 +33,43 @@ PixelStudio.canvas = {
 		this.screen.height   = this.pixel_dimension * this.nb_pixel.height;
 		this.nb_pixel.width  = nb_pixel_width;
 
+		this.backgroundColor = new Color('white', [255,255,255]);
+
 		let $c = $('<canvas></canvas>');
-		$c.attr({
+		$c
+		.attr({
 			'width' : this.screen.width,
 			'height': this.screen.height
-		}).appendTo('#'+divId);
+		})
+		.on('click', this.on_click)
+		.appendTo('#'+divId);
 
 		this.$canvas = $c;
 
 		this.context = $c[0].getContext('2d');
+
+
+	},
+
+	screenToCanvas : function(e){
+		
+		let offset = this.$canvas.offset();
+		let cx = e.clientX - offset.left;
+		let cy = e.clientY - offset.top;
+
+		let px = parseInt(cx / this.pixel_dimension +1);
+		let py = parseInt(cy / this.pixel_dimension +1);
+
+		return {x : px, y : py};
+	},
+
+	on_click : function(e){
+
+		let ps       = PixelStudio,
+			position = ps.canvas.screenToCanvas(e),
+			tool     = ps.palette_tools.getSelected(),
+			color    = ps.palette_color.getSelected();
+			tool.use(position.x, position.y);
 	},
 
 	draw : function(x, y, color) {

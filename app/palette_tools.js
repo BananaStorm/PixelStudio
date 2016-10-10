@@ -20,7 +20,7 @@ PixelStudio.palette_tools = {
 			$template
 			.clone()
 			.html("<i title='" + tool.name + "' class='fa "+ tool.icon_file +"'></i>")
-			.appendTo('#tools')
+			.appendTo('#tools');
 
 		}
 
@@ -28,7 +28,7 @@ PixelStudio.palette_tools = {
 
 		$('#tools').on('click', 'li', function(){
 
-			index   = $(this).index(),
+			index  = $(this).index(),
 			tool   = self.tools[index];
 
 			self.selectTool(tool);
@@ -47,5 +47,9 @@ PixelStudio.palette_tools = {
 		.eq(tool.index)
 		.addClass('selected')
 
+	},
+
+	getSelected : function(){
+		return this.selectedTool;
 	}
 }

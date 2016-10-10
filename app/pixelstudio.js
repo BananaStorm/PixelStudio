@@ -11,8 +11,14 @@ var PixelStudio = {
 		];
 
 		let tools = [
-			new Tool('crayon', 'fa-pencil'),
-			new Tool('gomme', 'fa-eraser')
+			new Tool('crayon', 'fa-pencil', function(x,y){
+				let color = PixelStudio.palette_color.getSelected();
+				PixelStudio.canvas.draw(x, y, color);
+			}),
+			new Tool('gomme', 'fa-eraser', function(x,y){
+				let color = PixelStudio.canvas.backgroundColor;
+				PixelStudio.canvas.draw(x, y, color);
+			})
 		];
 
 		this.palette_color.init(colors);

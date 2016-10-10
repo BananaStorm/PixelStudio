@@ -48,5 +48,9 @@ PixelStudio.palette_color = {
 		.eq(color.index)
 		.addClass('selected')
 
+	},
+
+	getSelected : function(){
+		return this.selectedColor;
 	}
 }
