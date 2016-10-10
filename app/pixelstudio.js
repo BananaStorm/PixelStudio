@@ -3,13 +3,19 @@ var PixelStudio = {
 	init : function(){
 
 		let colors = [
-			new Color('blanc', [255, 255, 255]),
-			new Color('rouge', [255, 0, 0]),
-			new Color('vert',  [0, 255, 0]),
-			new Color('bleu',  [0, 0, 255]),
-			new Color('noir',  [0, 0, 0])
+			new Color('light cyan',          [221, 255, 247]),
+			new Color('pale robin egg blue', [147, 225, 216]),
+			new Color('light salmon pink',   [255, 166, 158]),			
+			new Color('medium ruby',         [170, 68,  101]),
+			new Color('japanese violet',     [70,  34,  85])
 		];
 
-		this.palette.initColors(colors);
+		let tools = [
+			new Tool('crayon', 'fa-pencil'),
+			new Tool('gomme', 'fa-eraser')
+		]
+
+		this.palette_color.init(colors);
+		this.palette_tools.init(tools)
 	}
 };

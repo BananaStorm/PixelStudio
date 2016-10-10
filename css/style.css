@@ -11,7 +11,12 @@
 
 }
 
-.tool, .color {
+ul {
+	list-style: none;
+}
+
+.tool, #colors li {
+	display: block;
 	width: 24px;
 	height: 24px;
 	box-sizing: border-box;
@@ -21,12 +26,16 @@
 	cursor: pointer;
 }
 
-.tool:hover, .color:hover {
-	outline: 2px solid grey;
+.tool:hover, #colors li:hover {
+	outline: 2px solid white;
 }
 
 .icon {
 	text-align: center;
+}
+
+#colors li.selected, #tools li.selected {
+	outline: 2px solid darkgrey;
 }
 
 #tools, #colors {
