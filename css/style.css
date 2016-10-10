@@ -15,6 +15,12 @@ ul {
 	list-style: none;
 }
 
+#canvas {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
 .tool, #colors li {
 	display: block;
 	width: 24px;

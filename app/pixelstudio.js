@@ -16,6 +16,7 @@ var PixelStudio = {
 		]
 
 		this.palette_color.init(colors);
-		this.palette_tools.init(tools)
+		this.palette_tools.init(tools);
+		this.canvas.init('canvas', $(window).width(), $(window).height(), 64);
 	}
 };
